@@ -2,6 +2,6 @@
 """
 import pandas as pd
 import numpy as np
-from scipy import stats
+import scipy
 
 TEST = pd.DataFrame(np.ones(10))
