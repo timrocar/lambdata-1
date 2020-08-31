@@ -8,7 +8,7 @@ REQUIRED = [
 ]
 
 with open("README.md", "r") as fh:
-    LONG_DESCRIPTION = fh.head()
+    LONG_DESCRIPTION = fh.read()
 
 setuptools.setup(
     name="lambdata-Tristan-Brown1096",
