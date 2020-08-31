@@ -1,1 +1,1 @@
-
+FAVORITE_COLORS = ['cyan', 'blue', 'teal', 'black', 'orange', 'red']
