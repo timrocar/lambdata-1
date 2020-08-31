@@ -4,7 +4,8 @@ import setuptools
 
 REQUIRED = [
     "numpy",
-    "pandas"
+    "pandas",
+    "scipy.stats"
 ]
 
 with open("README.md", "r") as fh:
