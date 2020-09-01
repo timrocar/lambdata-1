@@ -31,7 +31,7 @@ def date_split(df):
 # Removes constant columns and columns with high cardinality
 def wrangle(X, cardinality=100):
     # drop constant columns
-    X = X.drop([col for col in X if X[col].nunique() == 1], axis=1)
+    X = X.drop([col for col in X if X[col].nunique() == 1], axis=1)]
 
     # drop high cardinality columns
     hc = [col for col in X.describe(include='object').columns
