@@ -29,9 +29,6 @@ def date_split(df):
 
 
 def wrangle(X, cardinality=100):
-    # copy X
-    X = X.copy()
-
     # drop constant columns
     X = X.drop([col for col in X if X[col].nunique() == 1], axis=1)
 
