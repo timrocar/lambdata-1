@@ -4,6 +4,11 @@
 # given two columns of a DataFrame
 
 
+import pandas as pd
+import numpy as np
+from scipy import stats
+
+
 def cont_chi2(col1, col2):
     contingency = pd.crosstab(col1, col2)
     print(contingency)
@@ -40,6 +45,5 @@ def wrangle(X, cardinality=100):
 
 
 class MyDataFrame(pd.DataFrame):
-    wrangle(X=self)
-    cont_chi2()
-    date_split(df=self)
+    wrangle(pd.DataFrame)
+    date_split(pd.DataFrame)
