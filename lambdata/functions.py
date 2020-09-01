@@ -16,10 +16,11 @@ def cont_chi2(col1, col2):
 
 # Splits dates into new columns in a DataFrame
 def date_split(df):
-    [col for col in X if X[col].dtype == 'DateTime64' 
+    dates = [col for col in df if df[col].dtype == 'DateTime64']
+    for col in dates:
         df[col+'_month'] = list(df[col].dt.month)
         df[col+'_day'] = list(df[col].dt.day)
-        df[col+'_year'] = list(df[col].dt.year)]
+        df[col+'_year'] = list(df[col].dt.year)
 
 
 def wrangle(X, cardinality=100):
