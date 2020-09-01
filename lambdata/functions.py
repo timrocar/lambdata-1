@@ -29,18 +29,18 @@ def date_split(df):
 
 
 # Removes constant columns and columns with high cardinality
-def wrangle(X, cardinality=100):
+def wrangle(df, cardinality=100):
     # drop constant columns
-    concols = [column for column in X if X[column].nunique() == 1]
-    X = X.drop(concols, axis=1)
+    concols = [col for col in df if df[col].nunique() == 1]
+    df = df.drop(concols, axis=1)
 
     # drop high cardinality columns
-    hc = [col for col in X.describe(include='object').columns
-          if X[col].nunique() > cardinality]
-    X = X.drop(hc, axis=1)
+    hc = [col for col in df.describe(include='object').columns
+          if df[col].nunique() > cardinality]
+    df = df.drop(hc, axis=1)
 
     # return wrangled DataFrame
-    return X
+    return df
 
 
 class MyDataFrame(pd.DataFrame):
