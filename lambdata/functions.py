@@ -28,6 +28,7 @@ def date_split(df):
         df[col+'_year'] = list(df[col].dt.year)
 
 
+# Removes constant columns and columns with high cardinality
 def wrangle(X, cardinality=100):
     # drop constant columns
     X = X.drop([col for col in X if X[col].nunique() == 1], axis=1)
